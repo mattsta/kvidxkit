@@ -1,0 +1,3 @@
+[submodule "deps/sqlite3"]
+	path = deps/sqlite3
+	url = https://github.com/mattsta/sqlite3-cmake
