@@ -1,1 +1,9 @@
 build/
+
+deps-np/
+
+cppcheck*
+
+test-*/
+test-*-wal
+test-*sqlite3-*

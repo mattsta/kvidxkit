@@ -1,0 +1,10 @@
+# also we don't revision contorl rocksdb because it's kinda bad
+# for this use case and it's also huge and bloated and pointless
+rocksdb/
+
+
+# internal logic things
+*-old/
+
+# avoid sqlite zipfile leaking into the repo
+*.zip

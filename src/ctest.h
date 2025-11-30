@@ -5,7 +5,7 @@
 
 /* Generate new string concatenating integer i against string 'prefix' */
 #define CTEST_INCLUDE_GEN(named)                                               \
-    static char *gen##named(char *prefix, int i) {                             \
+    static char *gen##named(const char *prefix, int i) {                       \
         static char result[64] = {0};                                          \
         snprintf(result, sizeof(result), "%s%d", prefix, i);                   \
         return result;                                                         \
@@ -57,7 +57,7 @@ CTEST_INCLUDE_GEN(val)
         if (!err)                                                              \
             printf("ALL TESTS PASSED!\n");                                     \
         else                                                                   \
-            ERR("Sorry, not all tests passed!  In fact, %d tests failed.",     \
+            ERR("Sorry, not all tests passed!  In fact, %u tests failed.",     \
                 err);                                                          \
         return err;                                                            \
     } while (0)
